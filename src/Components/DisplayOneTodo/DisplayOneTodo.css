@@ -1,0 +1,83 @@
+.box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.4s;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.box:hover {
+    background: var(--i);
+    color: black;
+    box-shadow: 0 0 5px var(--i),
+        0 0 10px var(--i),
+        0 0 20px var(--i),
+        0 0 40px var(--i);
+}
+.container:hover > .box {
+    opacity: 0.3;
+} 
+.container:hover > .box:hover {
+    transform: scale(1.1);
+    opacity: 1;
+} 
+
+.toprow {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.bottomrow {
+    padding: 10px;
+}
+
+.task {
+    padding: 4px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.button button {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    display: grid;
+    place-items: center;
+}
+
+.button button:hover {
+    background-color: var(--i);
+    color: #000;
+    font-weight: bolder;
+    transform: scale(0.9);
+    box-shadow: 0 0 5px var(--i),
+        0 0 10px var(--i),
+        0 0 20px var(--i),
+        0 0 40px var(--i);
+}
+
+@media screen and (max-width: 1200px) {
+    .box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button svg {
+        width: 15px;
+        height: 15px;
+    }
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #b5bbee;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputcontainer {
+    width: calc(100vw - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputcontainer button {
+    background-color: rgba(6, 107, 65, 0.2);
+    padding: 10px;
+    margin: 0 10px;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 10px;
+    /* width: 100px; */
+    cursor: pointer;
+    transition: 0.5s;
+    display: grid;
+    place-items: center;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputcontainer button:hover {
+    background-color: var(--i);
+    color: #000;
+    font-weight: bolder;
+    transform: scale(0.9);
+    box-shadow: 0 0 5px var(--i),
+        0 0 10px var(--i),
+        0 0 20px var(--i),
+        0 0 40px var(--i);
+}
+
+.inputcontainer input[type="text"] {
+    width: 350px;
+    margin: 40px 10px 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #222;
+    border: none;
+    outline: none;
+    color: #eee;
+}
+
+
+.inputcontainer button:disabled,
+.inputcontainer button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin: 40px 10px 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 850px) {
+    .inputcontainer {
+        width: 100vw;
+    }
+
+    .inputcontainer input[type="text"] {
+        width: 200px;
+        margin: 40px 10px 20px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    button svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    input[type="color"] {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .inputcontainer {
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    /* .inputcontainer input[type="text"] {
+        width: 150px;
+        margin: 20px 5px 10px;
+    }
+    input[type="color"] {
+        margin: 20px 5px 10px;
+    }
+    .inputcontainer input[type="button"],
+    .inputcontainer button {
+        margin: 20px 5px 10px;
+    } */
+}
